@@ -44,3 +44,50 @@ By default, the project targets a **local blockchain** (Hardhat or Ganache). How
 6. **Run the Node.js server:**
     ```
    npm start
+
+# Usage & API Endpoints
+
+## Check Token Information
+**GET** `/api/token-info`
+~~~bash
+curl http://localhost:3000/api/token-info
+~~~
+**Response (JSON):**
+~~~json
+{
+  "name": "MyToken",
+  "symbol": "MTK",
+  "totalSupply": "1000000000000000000000000"
+}
+~~~
+
+## Check Balance
+**GET** `/api/balance/:address`
+~~~bash
+curl http://localhost:3000/api/balance/0xYourAddress
+~~~
+**Response (JSON):**
+~~~json
+{
+  "address": "0xYourAddress",
+  "balance": "500000000000000000000"
+}
+~~~
+
+## Transfer Tokens via transferFrom
+**POST** `/api/transferFrom`
+~~~bash
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"from":"0xSenderAddress","to":"0xRecipientAddress","amount":"1000000000000000000"}' \
+  http://localhost:3000/api/transferFrom
+~~~
+**Response (JSON):**
+~~~json
+{
+  "tx": {
+    "hash": "0xTransactionHash",
+    "nonce": 1,
+    "..."
+  }
+}
+~~~
