@@ -19,7 +19,7 @@ By default, the project targets a **local blockchain** (Hardhat or Ganache). How
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone <git@github.com:not-steve-jobs/smart-contract.git>
    cd my-erc20-project
 
 2. **install dependencies:**
