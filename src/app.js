@@ -9,9 +9,9 @@ app.use(express.json());
 app.use('/api', tokenRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the ERC20 API');
+  res.send('Welcome to the ERC20 API');
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });

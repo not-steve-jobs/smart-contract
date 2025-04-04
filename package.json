@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/app.js",
     "deploy": "npx hardhat run scripts/deploy.js --network localhost",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "engines": {
     "node": "20.x"
@@ -20,8 +22,12 @@
   "devDependencies": {
     "@nomiclabs/hardhat-waffle": "^2.0.0",
     "chai": "^4.3.6",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.7.2",
-    "hardhat": "^2.12.7"
+    "hardhat": "^2.12.7",
+    "prettier": "^3.5.3"
   }
 }
